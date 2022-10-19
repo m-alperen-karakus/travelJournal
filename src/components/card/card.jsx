@@ -1,21 +1,21 @@
 import React from "react";
 import "./card.css"
-
-export function Card() {
+import mapIcon from "../../assets/mapIcon.svg"
+export function Card(props) {
     return(
-        <div className="card">
-            <img/>
+        <div className="card" style={{backgroundColor: props.backgroundColor}}>
+            <img className="cardImg" src={props.imageUrl} />
             <div className="article">
                 <div className="upperTitle">
-                    <div>
-                        <img/>
-                        <div></div>
+                    <div className="location">
+                        <img src={mapIcon} />
+                        <div>{props.location}</div>
                     </div>
-                    <div></div>
+                    <a href={props.googleMapsUrl}>View on Google Maps</a>
                 </div>
-                <div className="title">Ankara</div>
-                <div className="subtitle"></div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint eius ad repellat error eveniet. Eum tenetur quaerat rem voluptatibus, a similique esse minima modi debitis accusamus officiis. Magni, sunt impedit.</p>
+                <div className="title">{props.title}</div>
+                <div className="subtitle">{props.startDate} - {props.endDate}</div>
+                <p>{props.description}</p>
             </div>
         </div>
     )

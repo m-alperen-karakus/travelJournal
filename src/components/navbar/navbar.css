@@ -1,0 +1,9 @@
+.header{
+    background: #2B283A;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
+    color: white;
+    padding: 20px 0px;
+}
